@@ -1,0 +1,1 @@
+export { UserPostListFactory } from "./UserPostListFactory";

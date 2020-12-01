@@ -1,0 +1,1 @@
+export { PostDetailsPageContainer } from "./PostDetailsContainer";
