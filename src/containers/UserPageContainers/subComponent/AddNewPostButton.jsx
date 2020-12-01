@@ -3,6 +3,7 @@ import styled from "styled-components";
 const AddButtonWrapper = styled.img`
   width: 2rem;
   height: 2rem;
+  cursor: pointer;
 `;
 
 const Wrapper = styled.div`
