@@ -6,6 +6,7 @@ const ElementWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  cursor: pointer;
 `;
 
 const SingleUserWrapper = styled.div`

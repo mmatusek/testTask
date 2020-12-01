@@ -14,11 +14,15 @@ const DeleteIconWrapper = styled.img`
   width: 2rem;
   height: 2rem;
   padding: 0 0.5rem;
+  cursor: pointer;
 `;
 
 const TitleWrapper = styled.div`
+  width: 100%;
+  text-align: center;
   font-size: ${fontSize.large};
   line-height: 1.5rem;
+  cursor: pointer;
 `;
 
 export const SinglePost = ({ postsList, handleClick, handleOpenDeleteModal }) =>
