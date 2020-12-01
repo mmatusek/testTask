@@ -1,6 +1,6 @@
 ## The Pollution App
 
-The Pollution App created with React. App displays names and descriptions of 10 most polluted cities in selected country from API.
+The App created with React. App displays details about user, his posts and posts' comments from API.
 
 ## Requirements
 
@@ -10,7 +10,7 @@ For development, you will only need Node.js installed on your environement.
 
     $ git clone git@github.com:mmatusek/testTask.git
     $ cd testTask
-    $ npm install
+    $ yarn
 
 #### Run
 
