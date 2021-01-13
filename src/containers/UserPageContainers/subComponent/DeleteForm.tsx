@@ -53,29 +53,22 @@ const DoneStatusWrapper = styled.div`
 `;
 
 const DoneStatus = styled.div`
-  font-size: ${fontSize.lagrge};
+  font-size: ${fontSize.large};
   margin: 0 0.5rem;
   line-height: 2rem;
 `;
 
+type DeleteFormTypes = {
+  setIsDeleteModalActive: (value: boolean) => void;
+  currentPostId: number;
+}
+
 export const DeleteForm = ({
   setIsDeleteModalActive,
-  userId,
   currentPostId,
-}) => {
-  const [bodyValue, setBodyValue] = useState({ userId });
+}: DeleteFormTypes) => {
   const [isSuccess, setIsSuccess] = useState(false);
   const [error, setError] = useState(null);
-
-  const handleInputChange = (event) => {
-    const value = event.target.value;
-    const name = event.target.name;
-
-    setBodyValue({
-      ...bodyValue,
-      [name]: value,
-    });
-  };
 
   const handleSubmit = async () => {
     try {
@@ -91,7 +84,7 @@ export const DeleteForm = ({
       <FormWrapper>
         <AswerWrapper>Are you sure you want to delete this post?</AswerWrapper>
         <ButtonsWrapper>
-          <Button variant="primary" type="submit" onClick={handleSubmit}>
+          <Button type="submit" onClick={handleSubmit}>
             Submit
           </Button>
           <Button onClick={() => setIsDeleteModalActive(false)}>Cancel</Button>
