@@ -1,4 +1,4 @@
-const mediaQ = (size) => `@media only screen and (min-width: ${size}px)`;
+const mediaQ = (size: number) => `@media only screen and (min-width: ${size}px)`;
 
 export const colors = {
   black: "#000000",
