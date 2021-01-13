@@ -16,7 +16,11 @@ const NameWrapper = styled.div`
   font-size: ${fontSize.large};
 `;
 
-export const PageHeader = ({ name }) => {
+type PageHeaderTypes = {
+  name: string
+}
+
+export const PageHeader = ({ name }: PageHeaderTypes) => {
   const history = useHistory();
   return (
     <>

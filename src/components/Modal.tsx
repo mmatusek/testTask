@@ -23,6 +23,15 @@ const BackgroundWrapper = styled.div`
   opacity: 0.75;
 `;
 
+type ModalTypes = {
+  isDeleteModalActive: boolean;
+  setIsDeleteModalActive: (value: boolean) => void;
+  isModalActive: boolean;
+  setIsModalActive: (value:boolean) => void;
+  userId: number;
+  currentPostId : number;
+}
+
 export const Modal = ({
   isDeleteModalActive,
   setIsDeleteModalActive,
@@ -30,7 +39,7 @@ export const Modal = ({
   setIsModalActive,
   userId,
   currentPostId,
-}) => {
+}: ModalTypes)  => {
   const container = document.getElementById("modal");
 
   const renderModalBody = () => {
@@ -48,7 +57,7 @@ export const Modal = ({
   };
 
   return (
-    (isModalActive || isDeleteModalActive) &&
+    container && (isModalActive || isDeleteModalActive) &&
     createPortal(
       <ModalWrapper className="modal">
         <BackgroundWrapper />
